@@ -689,3 +689,21 @@ private:
     float _initial_heading_cd;  // vehicle heading (in centi-degrees) at moment vehicle was armed
     float _desired_heading_cd;  // latest desired heading (in centi-degrees) from pilot
 };
+
+class ModePark : public Mode
+{
+public:
+
+    uint32_t mode_number() const override { return PARK; }
+    const char *name4() const override { return "PARK"; }
+
+    // methods that affect movement of the vehicle in this mode
+    void update() override;
+
+    // attributes for mavlink system status reporting
+    bool attitude_stabilized() const override { return false; }
+
+    // hold mode does not require position or velocity estimate
+    bool requires_position() const override { return false; }
+    bool requires_velocity() const override { return false; }
+};

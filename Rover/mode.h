@@ -26,6 +26,7 @@ public:
         LOITER       = 5,
         FOLLOW       = 6,
         SIMPLE       = 7,
+        PARK         = 8,
         AUTO         = 10,
         RTL          = 11,
         SMART_RTL    = 12,
@@ -589,7 +590,7 @@ protected:
     bool _loitering;        // true if loitering at end of SRTL
 };
 
-   
+
 
 class ModeSteering : public Mode
 {
@@ -688,4 +689,3 @@ private:
     float _initial_heading_cd;  // vehicle heading (in centi-degrees) at moment vehicle was armed
     float _desired_heading_cd;  // latest desired heading (in centi-degrees) from pilot
 };
-

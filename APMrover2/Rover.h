@@ -278,6 +278,7 @@ private:
 
     ModeInitializing mode_initializing;
     ModeHold mode_hold;
+    ModePark mode_park;
     ModeManual mode_manual;
     ModeAcro mode_acro;
     ModeGuided mode_guided;

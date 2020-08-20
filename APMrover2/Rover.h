@@ -111,6 +111,7 @@ public:
     friend class ModeAuto;
     friend class ModeGuided;
     friend class ModeHold;
+    friend class ModePark;
     friend class ModeLoiter;
     friend class ModeSteering;
     friend class ModeManual;

@@ -451,6 +451,9 @@ Mode *Rover::mode_from_mode_num(const enum Mode::Number num)
     case Mode::Number::HOLD:
         ret = &mode_hold;
         break;
+    case Mode::Number::PARK:
+        ret = &mode_park;
+        break;
     case Mode::Number::LOITER:
         ret = &mode_loiter;
         break;

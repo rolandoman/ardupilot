@@ -8,10 +8,10 @@ void ModePark::update()
     // if vehicle is balance bot, calculate actual throttle required for balancing
     if (rover.is_balancebot()) {
         rover.balancebot_pitch_control(throttle);
+        // in park mode, fall backwards only
+        // prevent any negative throttle action
+        if (throttle < 0.0f) { throttle = 0.0f; }
     }
-    // in park mode, fall backwards only
-    // prevent any negative throttle action
-    if (throttle < 0.0f) { throttle = 0.0f; }
 
     // relax mainsail
     g2.motors.set_mainsail(100.0f);
